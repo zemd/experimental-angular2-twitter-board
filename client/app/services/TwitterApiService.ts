@@ -9,12 +9,14 @@ export default class TwitterApiService {
 
   private lastSearchedTerm: string;
   private nextResults: string;
-  private host: string = 'http://localhost:3000';
 
   constructor(private http: Http) {
   }
 
   next() {
+    if (!this.nextResults) {
+      return Observable.empty();
+    }
     return this.doSearch(this.nextResults);
   }
 
@@ -27,7 +29,7 @@ export default class TwitterApiService {
 
   private doSearch(query) {
     return this.http
-      .get(`${this.host}/search${query}`)
+      .get(`/search${query}`)
       .map(result => result.json())
       .map(results => {
         this.nextResults = results['search_metadata']['next_results'];

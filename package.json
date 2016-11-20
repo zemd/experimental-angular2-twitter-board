@@ -5,7 +5,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "cd ./client && npm install && tsc && cd .. && NODE_ENV=development node ."
+    "start": "cd ./client && npm install && npm run compile && cd .. && NODE_ENV=development node ."
+  },
+  "engines": {
+    "node": "6.9.1"
   },
   "author": "Dmitry Zelenetskiy",
   "license": "MIT",

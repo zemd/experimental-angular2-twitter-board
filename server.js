@@ -21,7 +21,7 @@ app.get('/search', function (req, res) {
   });
 });
 
-app.listen(3000, (err) => {
+app.listen(config('server.port'), (err) => {
   if (err) {
     console.error(err);
   }
