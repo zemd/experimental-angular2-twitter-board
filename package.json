@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "twitter-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "cd ./client && npm install && tsc && cd .. && NODE_ENV=development node ."
+  },
+  "author": "Dmitry Zelenetskiy",
+  "license": "MIT",
+  "dependencies": {
+    "easy-loader": "^1.0.1",
+    "express": "^4.14.0",
+    "twit": "^2.2.5"
+  }
+}

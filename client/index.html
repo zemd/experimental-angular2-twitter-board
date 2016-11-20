@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WUBBA LUBBA DUB DUBS!</title>
+
+  <base href="/">
+
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function (err) {
+      console.error(err);
+    });
+  </script>
+
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<search-app></search-app>
+<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</body>
+</html>
